@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+</head>
+<body>
+    <h1>Thank you!</h1>
+    <p>We'll send text to:
+        <span id="yourphonenumber"></span>!
+    </p>
+
+    <form action="./main.html">
+        <input type="submit" class="btn btn-primary" value="Go Back">
+    </form>
+
+    <script>
+        const queryString = window.location.search;
+        console.log(queryString);
+
+        const urlParams = new URLSearchParams(queryString);
+        const phoneNumber = urlParams.get('phone-number');
+
+        
+        // if (phoneNumber=="") {
+        //     alert("Type your phone number!");
+        // }
+
+        console.log("Phone number: ", phoneNumber);
+
+        document.getElementById("yourphonenumber").innerText = phoneNumber;
+
+    </script>
+</body>
+</html>
