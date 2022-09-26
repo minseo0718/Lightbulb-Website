@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you!</title>
+</head>
+<body>
+    <h1>Thank you!</h1>
+
+    <p>Your major is
+        <span id="yourmajor"></span>!
+    </p>
+
+    <form action="./index.html">
+        <input type="submit" class="btn btn-primary" value="Go Back">
+    </form>
+
+    <script>
+        const queryString = window.location.search;
+        console.log(queryString);
+
+        const urlParams = new URLSearchParams(queryString);
+        const major = urlParams.get('major');
+        console.log("Major: ", major);
+
+        document.getElementById("yourmajor").innerText = major;
+    </script>
+</body>
+</html>
