@@ -79,17 +79,17 @@
     </div>
         <div class="row">
             <div class="col-sm-8">
-                <form action="./name-feedback.html"> 
+                <form action="./name-feedback.html" name="nameForm"> 
                     <input type="text" placeholder="Enter your name" name="name" required>
-                    <input type="submit" class="btn btn-primary">
+                    <input type="submit" class="btn btn-primary" onclick="return nameValidation()">
                 </form>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-8">
-                <form action="./email-feedback.html" onclick="emailValidation()"> 
-                    <input id="email1" type="text" placeholder="Enter your email" name="email" required>
-                    <input type="submit" class="btn btn-primary" onclick="emailValidation()">
+                <form action="./email-feedback.html" name="emailForm"> 
+                    <input type="text" placeholder="Enter your email" name="email" required>
+                    <input type="submit" class="btn btn-primary" onclick="return emailValidation()">
                 </form>
             </div>
         </div>
@@ -103,9 +103,9 @@
         </div>
         <div class="row">
             <div class="col-sm-8">
-                <form action="./major-feedback.html">
+                <form action="./major-feedback.html" name="majorForm">
                     <input type="text" placeholder="Enter your major" name="major" required>
-                    <input type="submit" class="btn btn-primary">
+                    <input type="submit" class="btn btn-primary" onclick="return majorValidation()">
                 </form>
             </div>
         </div>

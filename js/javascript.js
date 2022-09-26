@@ -8,26 +8,53 @@ function changeColor() {
     x.style.color = "white";
 }
 
-var logo = document.getElementById("logo");
-
 function makeBigger() {
+    var logo = document.getElementById("logo");
     logo.style.height = "200px";
 }
 
 
 function goBack() {
+    var logo = document.getElementById("logo");
     logo.style.height = "100px";
 
 }
 
 
 function emailValidation() {
-    const email_first = document.getElementsById("email1");
-    if(email_first.indexOf("@") == -1 ) {
+
+    const email_first = document.forms["emailForm"]["email"].value;
+    console.log(email_first);
+
+    if(email_first.indexOf("@") === -1 ) {
         console.log("Enter a valid email!");
         alert('Enter a vaild email!');
         return false;
     }
+}
+
+function nameValidation() {
+
+    const name_first = document.forms["nameForm"]["name"].value;
+    console.log(name_first);
+
+    if(name_first.length < 4) {
+        alert('Enter a valid name(fisrt name and last name)!');
+        return false;
+    }
+
+}
+
+function majorValidation() {
+
+    const major_first = document.forms["majorForm"]["major"].value;
+    console.log(major_first);
+
+    if(major_first.length < 4) {
+        alert('Enter a valid major!');
+        return false;
+    }
+
 }
 
 // function something() {
